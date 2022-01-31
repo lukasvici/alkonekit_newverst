@@ -1,0 +1,120 @@
+$greycolor: #E5E5E5;
+$redcolor: #FF6060;
+body{
+    margin: 0;
+    padding: 0;
+    height: 5000px;
+}
+.container{
+    margin: 0 auto;
+    width: 80%;
+}
+header{
+    box-shadow: 0px 4px 15px $greycolor;
+}
+.flex-header{
+    .logo-search{
+        .logo{
+            margin-right: 10px;
+        }
+        .search{
+            margin-left: 20px;
+            align-items: center;
+            display: flex;
+            input{
+                border-radius: 5px 0 0 5px;
+                border: 1px solid $greycolor;
+                width: 200px;
+                height: 35px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                &::placeholder{
+                    font-family: 'Roboto', sans-serif;
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    color:$greycolor;
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+            button{
+                span{
+                    color: $redcolor;
+                    font-size: 30px;
+                    font-family: 'Material Icons';
+                }
+                padding: 0;
+                border: 1px solid $redcolor;
+                border-radius: 0 5px 5px 0;
+                background-color: white;
+                width: 35px;
+                height: 35px;
+                &:hover{
+                    span{
+                        color: white;
+                    }
+                    background-color: $redcolor;
+                }
+            }
+        }
+        align-items: center;
+        display: flex;
+    }
+    padding: 15px 0 15px 0;
+    justify-content: space-between;
+    display: flex;
+    .socs-cart{
+        align-items: center;
+        display: flex;
+        .socs-links a{
+            & img:hover{
+                filter: invert(60%);
+            }
+            margin-left: 4px;
+        }
+        button{
+            span{
+                color: white;
+                font-family: 'Material Icons';
+                font-size: 30px;
+            }
+            display: flex;
+            align-items: center;
+            border: 1px solid $redcolor;
+            background-color: $redcolor;
+            border-radius: 17px;
+            margin-left: 20px;
+            width: 122px;
+            span{
+                margin-left: 10px;
+            }
+            b{
+                margin-left: 10px;
+            }
+            &:hover{
+                b{
+                    color: $redcolor;
+                }
+                span{
+                    color: $redcolor;
+                }
+                background-color: white;
+            }
+        }
+        .cart{
+            width: 122px;
+            height: 40px;
+            img{
+                height: 95%;
+            }
+            b{
+                font-size: 20px;
+                color: white;
+            }
+        }
+    }
+}
+hr{
+    border: 1px solid #c8c8c8;
+}
