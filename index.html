@@ -12,15 +12,9 @@
 </head>
 <body>
     <div class="main_box">
-        <input type="checkbox" id="check">
-        <div class="sidebar_menu">
+        <div class="sidebar_menu" id="menu">
             <div class="logo">
               <a href="#">CodingLab</a>
-            </div>
-            <div class="btn_two">
-                <label for="check">
-                <i class="fas fa-times"></i>
-                </label>
             </div>
         </div>
     </div>
@@ -43,7 +37,7 @@
                     <i class="fas fa-shopping-cart icon-cart"></i>
                     <b>100₽</b>
                 </button>
-                <button class="btn-menu" v-on:click="test"><img src="images/menu.svg" alt="menu-icon"></button>
+                <button class="btn-menu" onClick="check()"><img src="images/menu.svg" alt="menu-icon"></button>
             </div>
         </div>
     </header>
@@ -65,6 +59,6 @@
         </div>
     </div>
     <script src="js/main.js"></script>
-
+    <script src="js/menu.js"></script>
 </body>
 </html>
