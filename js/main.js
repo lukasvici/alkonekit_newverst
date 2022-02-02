@@ -14,7 +14,8 @@ Vue.createApp(hr).mount('#hr')
 const menu = {
   data() {
     return {
-      category: ["Пиво", "Водка", "Вино", "Коньяк"]
+      subcategory: ['<a href="#">1</a><a href="#">2</a><a href="#">1</a>'],
+      category: ["Вина","Пиво","Шампанское","Алкоголь", "Vape","Промтовары"]
     }
   },
 }

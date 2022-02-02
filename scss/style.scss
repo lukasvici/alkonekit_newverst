@@ -14,9 +14,9 @@ body{
         border: none;
         i{
             font-size: 35px;
-            transition: all 0.3s;
+            transition: all 0.1s;
         }
-        & i:focus{
+        &:focus i{
             color: $darkgreycolor;
         }
     }
@@ -102,6 +102,11 @@ a{
                 text-transform: uppercase;
                 &:focus{
                     color: $darkgreycolor;
+                }
+            }
+            .subcategory{
+                a{
+                    display: block;
                 }
             }
         }

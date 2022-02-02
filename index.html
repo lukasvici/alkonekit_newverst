@@ -22,8 +22,10 @@
             </div>
             <div class="menu-title">Категории</div>
             <hr>
-            <div v-for="item in category" class="product">
+            <div v-for="(item, index) in category" class="product">
               <a href="#">{{item}}</a>
+              <div v-html="subcategory[index]" class="subcategory">
+              </div>
             </div>
         </div>
     </div>
