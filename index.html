@@ -13,8 +13,17 @@
 <body>
     <div class="main_box">
         <div class="sidebar_menu" id="menu">
-            <div class="logo">
-              <a href="#">CodingLab</a>
+            <div class="menu-top">
+                <div class="search">
+                    <input type="search" placeholder="Поиск...">
+                    <button class="search-confirm"><i class="fas fa-search icon-search"></i></button>
+                </div>
+                <button class="btn-menu" id="_close" onClick="closeSlideMenu()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="menu-title">Категории</div>
+            <hr>
+            <div v-for="item in category" class="product">
+              <a href="#">{{item}}</a>
             </div>
         </div>
     </div>
@@ -37,25 +46,25 @@
                     <i class="fas fa-shopping-cart icon-cart"></i>
                     <b>100₽</b>
                 </button>
-                <button class="btn-menu" onClick="check()"><img src="images/menu.svg" alt="menu-icon"></button>
+                <button class="btn-menu" id="_open" onClick="openSlideMenu()"><i class="fas fa-bars"></i></button>
             </div>
         </div>
     </header>
     <div class="container sales"  id="hr">
         <p class="sales-title">Скидки</p>
         <div class="flex-sales">
-            <div class="block">
+            <a class="block" href="#">
                 <div class="image-block"><img src="images/product.png" alt=""></div>
                 <div class="title"><p>{{ products[0]}}</p></div>
-            </div>
-            <div class="block">
+            </a>
+            <a class="block" href="#">
                 <div class="image-block"><img src="images/product.png" alt=""></div>
                 <div class="title"><p>{{ products[1]}}</p></div>
-            </div>
-            <div class="block">
+            </a>
+            <a class="block" href="#">
                 <div class="image-block"><img src="images/product.png" alt=""></div>
                 <div class="title"><p>{{ products[2]}}</p></div>
-            </div>
+            </a>
         </div>
     </div>
     <script src="js/main.js"></script>

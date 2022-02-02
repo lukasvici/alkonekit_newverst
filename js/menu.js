@@ -1,14 +1,8 @@
 function openSlideMenu () {
     document.getElementById("menu").style.right = 0;
+    document.getElementById("_open").style.visibility = 'hidden';
 }
 function closeSlideMenu () {
     document.getElementById("menu").style.right = '';
-}
-function check () {
-    if (document.getElementById("menu").style.right == ''){
-        openSlideMenu();
-    }
-    else{
-        closeSlideMenu();
-    }
+    document.getElementById("_open").style.visibility = '';
 }
