@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <link rel="stylesheet" href="scss/style.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
@@ -22,9 +23,13 @@
             </div>
             <div class="menu-title">Категории</div>
             <hr>
-            <div v-for="(item, index) in category" class="product">
-              <a href="#">{{item}}</a>
-              <div v-html="subcategory[index]" class="subcategory">
+            <div v-for="(item, index) in category" class="product" :id="'cat_'+index">
+              <div>
+                <a href="#" >{{item}}</a>
+                <button @click="openSub(index)" :id="'btno_'+index"><i class="fas fa-caret-square-down"></i></button>
+                <button @click="closeSub(index)" :id="'btnc_'+index" style="display: none;"><i class="fas fa-minus-square"></i></button>
+              </div>
+              <div v-html="subcategory[index]" class="subcategory" :id="'sub_'+index">
               </div>
             </div>
         </div>
@@ -55,17 +60,11 @@
     <div class="container sales"  id="hr">
         <p class="sales-title">Скидки</p>
         <div class="flex-sales">
-            <a class="block" href="#">
-                <div class="image-block"><img src="images/product.png" alt=""></div>
-                <div class="title"><p>{{ products[0]}}</p></div>
-            </a>
-            <a class="block" href="#">
-                <div class="image-block"><img src="images/product.png" alt=""></div>
-                <div class="title"><p>{{ products[1]}}</p></div>
-            </a>
-            <a class="block" href="#">
-                <div class="image-block"><img src="images/product.png" alt=""></div>
-                <div class="title"><p>{{ products[2]}}</p></div>
+            <a class="block" href="#" v-for="prod in products">
+                <div class="image-block"><img src="images/product.jpg" alt=""></div>
+                <div class="title"><p>{{ prod }}</p></div>
+                <div class="price"><span>231₽</span></div>
+                <div class="buybutton"><button id="btn-buy"><i class="fa fa-shopping-basket"></i></button></div>
             </a>
         </div>
     </div>

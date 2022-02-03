@@ -158,8 +158,22 @@ a {
   color: #ACACAC;
 }
 
+.main_box .sidebar_menu .product .subcategory {
+  overflow: hidden;
+  display: none;
+}
+
 .main_box .sidebar_menu .product .subcategory a {
   display: block;
+}
+
+.main_box .sidebar_menu .product button {
+  background-color: white;
+  border: none;
+}
+
+.main_box .sidebar_menu .product button i {
+  font-size: 15px;
 }
 
 .main_box .sidebar_menu .menu-title {
@@ -353,44 +367,50 @@ header {
 }
 
 .sales .flex-sales {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-columns: 3;
-          columns: 3;
+  -webkit-columns: 5;
+          columns: 5;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .sales .flex-sales .block {
-  border-radius: 20px;
+  border: 1px solid #E5E5E5;
   overflow: hidden;
-  width: 29%;
-  max-height: 600px;
+  width: 19%;
 }
 
 .sales .flex-sales .block .image-block {
   overflow: hidden;
-  height: 85%;
-}
-
-.sales .flex-sales .block .image-block img {
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
   width: 100%;
-  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.sales .flex-sales .block .image-block img:hover {
+.sales .flex-sales .block .image-block:hover img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
+.sales .flex-sales .block .image-block img {
+  margin: 6%;
+  width: 50%;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
 .sales .flex-sales .block .title {
-  font-family: 'Roboto Condensed', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -400,15 +420,66 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 15%;
-  background-color: #FF6060;
+  padding: 13px;
 }
 
 .sales .flex-sales .block .title p {
+  text-transform: uppercase;
+  font: 17px "SegoeUIRegular";
+  color: black;
   font-weight: 900px;
-  font-size: 30px;
-  color: white;
+  color: #ACACAC;
   margin: 0;
+}
+
+.sales .flex-sales .block .price {
+  text-align: center;
+  margin-top: 20%;
+  color: #676767;
+  font: 23px "SegoeUISemiBold";
+  margin-bottom: 1%;
+  font-weight: bold;
+}
+
+.sales .flex-sales .block .buybutton {
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sales .flex-sales .block .buybutton button {
+  height: 60%;
+  width: 11%;
+  background-color: white;
+  border: 1px solid #E5E5E5;
+}
+
+.sales .flex-sales .block .buybutton button i {
+  font-size: 16px;
+  color: #ACACAC;
+}
+
+.sales .flex-sales .block .buybutton button:hover {
+  background-color: #FF6060;
+}
+
+.sales .flex-sales .block .buybutton button:hover i {
+  color: white;
+}
+
+.sales .flex-sales .block .buybutton button:focus {
+  background-color: #FF6060;
+}
+
+.sales .flex-sales .block .buybutton button:focus i {
+  color: white;
 }
 
 @media screen and (max-width: 1440px) {

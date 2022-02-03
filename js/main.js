@@ -1,7 +1,7 @@
 const hr = {
     data() {
       return {
-        products: ["Пиво жадетское", "Водка Мароша", "Водка океан"],
+        products: ["Пиво жадетское", "Водка Мароша", "Водка океан","пять озер", "спирт"],
       }
     },
     methods:{
@@ -18,6 +18,18 @@ const menu = {
       category: ["Вина","Пиво","Шампанское","Алкоголь", "Vape","Промтовары"]
     }
   },
+  methods: {
+    openSub(id) {
+      $('#sub_'+id).show();
+      $('#btno_'+id).hide();
+      $('#btnc_'+id).show();
+    },
+    closeSub(id){
+      $('#sub_'+id).hide();
+      $('#btnc_'+id).hide();
+      $('#btno_'+id).show();
+    }
+}
 }
 Vue.createApp(menu).mount('#menu')
   

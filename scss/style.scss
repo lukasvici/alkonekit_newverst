@@ -105,8 +105,17 @@ a{
                 }
             }
             .subcategory{
+                overflow: hidden;
+                display: none;
                 a{
                     display: block;
+                }
+            }
+            button{
+                background-color: white;
+                border: none;
+                i{
+                    font-size: 15px;
                 }
             }
         }
@@ -235,39 +244,77 @@ header{
         margin-bottom: 3%;
       }
       .flex-sales{
+        flex-wrap: wrap;
         display: flex;
-        columns: 3;
+        columns: 5;
         justify-content: space-between;
         .block{
-            border-radius: 20px;
+            border: 1px solid $greycolor;
             overflow: hidden;
-            width: 29%;
-            max-height: 600px;
+            width: 19%;
             .image-block{
                 overflow: hidden;
-                height: 85%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                &:hover img{
+                    transform: scale(1.1);
+                }
                 img{
+                    margin: 6%;
+                    width: 50%;
                     transition: transform .3s;
-                    width: 100%;
-                    height: 100%;
-                    &:hover{
-                        transform: scale(1.1);
-                    }
                 }
             }
             .title{
-                font-family: 'Roboto Condensed', sans-serif;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 15%;
-                background-color: $redcolor;
+                padding: 13px;
                 p{
+                    text-transform: uppercase;
+                    font: 17px "SegoeUIRegular";
+                    color: black;
                     font-weight: 900px;
-                    font-size: 30px;
-                    color: white;
+                    color: $darkgreycolor;
                     margin: 0;
                 }
+            }
+            .price{
+                text-align: center;
+                margin-top: 20%;
+                color: #676767;
+                font: 23px "SegoeUISemiBold";
+                margin-bottom: 1%;
+                font-weight: bold;
+            }
+            .buybutton{
+                button{
+                    height: 60%;
+                    width: 11%;
+                    background-color: white;
+                    border: 1px solid $greycolor;
+                    i{
+                        font-size: 16px;
+                        color: $darkgreycolor;
+                    }
+                    &:hover{
+                        background-color: $redcolor;
+                        i{
+                            color: white;
+                        }
+                    }
+                    &:focus{
+                        background-color: $redcolor;
+                        i{
+                            color: white;
+                        }
+                    }
+                }
+                height: 55px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
     }
