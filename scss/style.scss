@@ -7,7 +7,8 @@ body{
     padding: 0;
     height: 5000px;
     #_open{
-        display: none;
+        display: block;
+        margin-left: 20px;
     }
     .btn-menu{
         background-color: white;
@@ -17,6 +18,9 @@ body{
             transition: all 0.1s;
         }
         &:focus i{
+            color: $darkgreycolor;
+        }
+        &:hover i{
             color: $darkgreycolor;
         }
     }
@@ -35,8 +39,8 @@ a{
         z-index: 3;
         position: fixed;
         height: 100vh;
-        width: 80%;
-        right: -80%;
+        width: 40%;
+        right: -40%;
         background-color: white;
         box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
         overflow: hidden;
@@ -91,12 +95,22 @@ a{
                         }
                         background-color: $redcolor;
                     }
+                    &:hover{
+                        .icon-search{
+                            color: white;
+                        }
+                        background-color: $redcolor;
+                    }
                 }
             }
         }
         .product{
             margin-top: 14px;
             font-family: 'Roboto Condensed', sans-serif;
+            div{
+                display: flex;
+                justify-content: space-between;
+            }
             a{
                 margin-left: 20px;
                 text-transform: uppercase;
@@ -114,6 +128,7 @@ a{
             button{
                 background-color: white;
                 border: none;
+                margin-right: 20px;
                 i{
                     font-size: 15px;
                 }
@@ -247,11 +262,19 @@ header{
         flex-wrap: wrap;
         display: flex;
         columns: 5;
-        justify-content: space-between;
+        justify-content: center;
         .block{
-            border: 1px solid $greycolor;
+            border-bottom: 1px solid $greycolor;
             overflow: hidden;
-            width: 19%;
+            width: 24%;
+            height: 100%;
+            &:nth-child(2){
+                border-left: 1px solid $greycolor;
+                border-right: 1px solid $greycolor;
+            }
+            &:nth-child(3){
+                border-right: 1px solid $greycolor;
+            }
             .image-block{
                 overflow: hidden;
                 width: 100%;
@@ -290,8 +313,8 @@ header{
             }
             .buybutton{
                 button{
-                    height: 60%;
-                    width: 11%;
+                    height: 35px;
+                    width: 35px;
                     background-color: white;
                     border: 1px solid $greycolor;
                     i{
@@ -321,7 +344,7 @@ header{
 }
 @media screen and (max-width: 1440px) {
     .sales .flex-sales .block .title p{
-        font-size: 26px;
+        font-size: 18px;
     }
     .sales{
         margin-top: 8%;
@@ -331,8 +354,12 @@ header{
     .socs-links{
         display: none;
     }
+    .main_box .sidebar_menu{
+        width: 60%;
+        right: -60%;
+    }
     .sales .flex-sales .block .title p{
-        font-size: 20px;
+        font-size: 13px;
     }
     .sales{
         margin-top: 10%;
@@ -366,6 +393,16 @@ header{
     }
     .sales{
         margin-top: 17%;
+    }
+    .block{
+        border-left: 1px solid $greycolor;
+        border-right: 1px solid $greycolor;
+        border-left: 1px solid $greycolor;
+        border-top: none;
+    }
+    .main_box .sidebar_menu{
+        width: 80%;
+        right: -80%;
     }
 
   }
