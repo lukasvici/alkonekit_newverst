@@ -3,6 +3,7 @@ $greycolor: #E5E5E5;
 $darkgreycolor: #ACACAC;
 $redcolor: #FF6060;
 body{
+    background-color: #FAFAFA;
     margin: 0;
     padding: 0;
     height: 5000px;
@@ -342,6 +343,89 @@ header{
         }
     }
 }
+.flex-cart{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6%;
+    .products{
+        box-shadow: 0px 0px 15px $greycolor;
+        padding: 15px;
+        background-color: white;
+        overflow: hidden;
+        min-height: 300px;
+        border-radius: 40px;
+        width: 70%;
+        .block{
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            .amount{
+                display: flex;
+                align-items: center;
+                font-size: 30px;
+                p{
+                    margin: 0 30px 0 30px;
+                }
+                .btn{
+                    border: solid 1px $darkgreycolor;
+                    background-color: white;
+                    border-radius: 100%;
+                    width: 46px;
+                    height: 46px;
+                    font-size: 13px;
+                    color: $darkgreycolor;
+                    cursor: pointer;
+                }
+                .amount-plus{
+                    color: black;
+                    border: solid 1px black;
+                }
+            }
+            .product-block{
+                img{
+                    max-width: 90px;
+                }
+                .title {
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-size: 24px;
+                    margin-bottom: 0px;
+                    margin-top: 0px;
+                }
+                display: flex;
+                align-items: start;
+            }
+            .price{
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 36px;
+            }
+        }
+        .title-cart{
+            margin: 0 0 10px 20px;
+            font-size: 30px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+    }
+    .buy-block{
+        height: 300px;
+        box-shadow: 0px 0px 15px $greycolor;
+        padding: 15px;
+        background-color: white;
+        overflow: hidden;
+        border-radius: 40px;
+        width: 24%;
+        .block-top{
+            justify-content: space-between;
+            display: flex;
+            p{
+                margin: 0 5px 10px 5px;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
 @media screen and (max-width: 1440px) {
     .sales .flex-sales .block .title p{
         font-size: 18px;
